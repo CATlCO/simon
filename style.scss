@@ -1,0 +1,97 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+$size: 150px;
+$red: #D90000;
+$green: #85DB18;
+$yellow: #FFE11A;
+$blue: #04BFBF;
+
+body {
+  background-color: #2A2C2B;
+  font-family: 'Orbitron';
+}
+.simon {
+  width: $size*2 + 45px;
+  margin: $size/2 auto;
+  position: relative;
+}
+.quarter {
+  width: $size;
+  height: $size;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+.green {
+  background-color: $green;
+  border-radius: $size 10px 10px 10px;
+}
+.red {
+  background-color: $red;
+  border-radius: 10px $size 10px 10px;
+}
+.yellow {
+  background-color: $yellow;
+  border-radius: 10px 10px 10px $size;
+}
+.blue {
+  background-color: $blue;
+  border-radius: 10px 10px $size 10px;
+}
+.controls {
+  background-color: #2A2C2B;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.count {
+  font-size: 30px;
+  // line-height: 25px;
+  display: inline-block;
+  margin-top: 10px;
+  // padding: 10px;
+  color: white;
+  // box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.75);
+  // border-radius: 10px;
+}
+.strict {
+  color: $red;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.on {
+  color: $green;
+}
+.start {
+  color: white;
+  background-color: $green;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  width: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.restart {
+  @extend .start;
+  background-color: $red;
+  display: none;
+}
+.winner {
+  font-size: 50px;
+  font-weight: bold;
+  color: $red;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #2A2C2B;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: none;
+}
